@@ -9,7 +9,8 @@ require('./config/db.config');
 const app = express();
 
 //json parser middlewares
-
+app.use(body_parser.json())
+app.use(body_parser.urlencoded({extended:true}));
 
 //routes middleware
 app.use('/api/city', cityRouter);
