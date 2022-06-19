@@ -1,6 +1,8 @@
 const express = require('express');
 const body_parser = require('body-parser');
+const cityRouter = require('./routes/city.route');
 require('./config/db.config');
+
 
 
 //init app instance
@@ -10,6 +12,7 @@ const app = express();
 
 
 //routes middleware
+app.use('/api/city', cityRouter);
 
 
 const PORT = process.env.PORT || 8080
