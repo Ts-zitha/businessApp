@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "nodejs-epress-mongoose-crud application\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[Cex\u001b[D\u001b[Cpress\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cs-express-mongoose crud application",
   "main": "server.js",
+  "npm start":"nodemon server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
