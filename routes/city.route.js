@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get('/', cityController.fetchCities);
 router.post('/', cityController.createCity);
+router.get('/:id', cityController.fetchCityById);
+router.put('/:id', cityController.updateCity);
 
 
 

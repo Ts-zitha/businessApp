@@ -20,3 +20,39 @@ exports.createCity = (req, res)=>{
     .then(data=> res.status(200).json({msg : 'city created', data}))
     .catch(err=>res.status(400).json({msg: 'error while creating city', err}));
 }
+
+//get city by id
+exports.fetchCityById = (req, res)=>{
+    City.findById(req.params.id)
+    .then(city=> {
+        if(!city){
+            res.status(404).json({msg:'No city with that id'});
+        }else{
+            res.status(200).json(city)
+        }
+    })
+    .catch(err=> {
+        if(err.name == 'CastError'){
+            res.status(404).json({ msg : 'Error id type'})
+        }else{
+            res.status(500).json({msg : err})
+        }
+        
+    });
+}
+// update city
+exports.updateCity = (req, res)=>{
+    City.findByIdAndUpdate(req.params.id, req.body, {new : true})
+    .then(data =>{
+        if(!data){
+            res.status(404).json({msg:'No city with that id'});
+        }else{
+            res.status(200).json(data)
+        }}).catch(err=>{
+            if(err.name == 'CastError'){
+                res.status(404).json({ msg : 'Error id type'})
+            }else{
+                res.status(500).json({msg : err})
+            }
+        })
+}
