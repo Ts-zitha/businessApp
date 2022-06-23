@@ -5,6 +5,7 @@ require('./config/db.config');
 //including router modules
 const cityRouter = require('./routes/city.route');
 const categoryRouter = require('./routes/category.route');
+const businessRouter = require('./routes/business.route');
 
 
 
@@ -18,6 +19,7 @@ app.use(body_parser.urlencoded({extended:true}));
 //routes middleware
 app.use('/api/city', cityRouter);
 app.use('/api/category', categoryRouter);
+app.use('/api/business', businessRouter);
 
 
 const PORT = process.env.PORT || 8080
