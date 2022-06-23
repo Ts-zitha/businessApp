@@ -1,7 +1,10 @@
 const express = require('express');
 const body_parser = require('body-parser');
-const cityRouter = require('./routes/city.route');
 require('./config/db.config');
+
+//including router modules
+const cityRouter = require('./routes/city.route');
+const categoryRouter = require('./routes/category.route');
 
 
 
@@ -14,6 +17,7 @@ app.use(body_parser.urlencoded({extended:true}));
 
 //routes middleware
 app.use('/api/city', cityRouter);
+app.use('/api/category', categoryRouter);
 
 
 const PORT = process.env.PORT || 8080
